@@ -1,0 +1,291 @@
+{
+	"info": {
+		"_postman_id": "b94a0048-43c4-49fd-ba8d-815d13c91f45",
+		"name": "API Petstore",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "API crear un usuario",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "aecdd60e-6086-4a9f-8c9d-d7a1f2250006",
+						"exec": [
+							"\r",
+							"\r",
+							"pm.globals.set(\"username\", pm.variables.replaceIn('{{$randomUserName}}'));\r",
+							"pm.globals.set(\"firstName\", pm.variables.replaceIn('{{$randomFirstName}}'));\r",
+							"pm.globals.set(\"lastName\", pm.variables.replaceIn('{{$randomLastName}}'));\r",
+							"pm.globals.set(\"email\", pm.variables.replaceIn('{{$randomEmail}}'));\r",
+							"pm.globals.set(\"password\", pm.variables.replaceIn('{{$randomPassword}}'));\r",
+							"pm.globals.set(\"phone\", pm.variables.replaceIn('{{$randomPhoneNumber}}'));\r",
+							"\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "80d6c1bb-3586-4f44-b2a0-b67f8d3bde2e",
+						"exec": [
+							"pm.test(\"Validad que la respuesta es exitosa(200)\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Valida que el Header contenga Date\", function () {\r",
+							"    pm.response.to.have.header(\"Date\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Valida que el tiempo de respuesta sea menor a 700\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(900);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Valida que el nombre del status sea ok\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "bdb1cfab-509e-4d14-b0b1-ee171abb0eb1",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n  {\r\n      \"id\": 0,\r\n    \"username\": \"{{username}}\",\r\n    \"firstName\": \"¨{{firstName}}\",\r\n    \"lastName\": \"{{lastName}}\",\r\n    \"email\": \"{{email}}\",\r\n    \"password\": \"{{password}}\",\r\n    \"phone\": \"{{phone}}\",\r\n    \"userStatus\": 0\r\n  }\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://petstore.swagger.io/v2/user/createWithList"
+			},
+			"response": []
+		},
+		{
+			"name": "API consulta usuario",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e45199ac-5f44-4d9b-a321-00979e2d1796",
+						"exec": [
+							"const jsonBody = pm.response.json();\r",
+							"\r",
+							"const responseSchema = {\r",
+							"    type: 'object',\r",
+							"    require: [\r",
+							"        'id',\r",
+							"        'firstName',\r",
+							"        'lastName',\r",
+							"        'username',\r",
+							"        'email'\r",
+							"    ],\r",
+							"    properties: {\r",
+							"        id: { type: 'number' },\r",
+							"        firstName: { type: 'string' },\r",
+							"        lastName: { type: 'string' },\r",
+							"        username: { type: 'string' },\r",
+							"        email: { type: 'string' }\r",
+							"    }\r",
+							"};\r",
+							"\r",
+							"\r",
+							"pm.test('Prueba 1: La respuesta coincide con el esquema', () => {\r",
+							"    pm.response.to.have.jsonSchema(responseSchema);\r",
+							"});\r",
+							"\r",
+							"pm.test('Validad que la respuesta es exitosa(200)', function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"pm.test('Valida que el Header contenga Date', function () {\r",
+							"    pm.response.to.have.header('Date');\r",
+							"})\r",
+							"\r",
+							"pm.test('Valida que el tiempo de respuesta sea menor a 700', function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"})\r",
+							"\r",
+							"pm.test('Valida que el nombre del status sea ok', function () {\r",
+							"    pm.response.to.have.status('OK');\r",
+							"})\r",
+							"\r",
+							"pm.test('Valida que respuesta contenga username', function () {\r",
+							"    pm.expect(pm.response.text()).to.include('username');\r",
+							"})\r",
+							"\r",
+							"pm.test('Valida que respuesta contenga ID', function () {\r",
+							"    pm.expect(pm.response.text()).to.include('id');\r",
+							"})\r",
+							"\r",
+							"pm.test('Prueba: valida que el status es activo', function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.userStatus).to.eql(0);\r",
+							"})\r",
+							"\r",
+							"pm.test('Valida que el header Content-Type', function () {\r",
+							"    pm.response.to.have.header('Content-Type');\r",
+							"    pm.expect(pm.response.headers.get('Content-Type')).to.include('application/json');\r",
+							"})\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "9ddd93ae-c189-4982-8da9-a5278690edc6",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://petstore.swagger.io/v2/user/{{username}}"
+			},
+			"response": []
+		},
+		{
+			"name": "API actualiza datos usuario",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "00e03376-f430-492c-9230-74137d1dde9f",
+						"exec": [
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "457bdc08-2296-4be7-95f4-0c7b5f134773",
+						"exec": [
+							"\r",
+							"\r",
+							"pm.test(\"Validad que la respuesta es exitosa(200)\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Valida que el Header contenga Date\", function () {\r",
+							"    pm.response.to.have.header(\"Date\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Valida que el tiempo de respuesta sea menor a 700\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Valida que el nombre del status sea ok\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "03ffbbec-0681-479e-9bf2-e97f53da5934",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 9223372036854775807,\r\n    \"username\": \"{{username}}\",\r\n    \"firstName\": \"Natalia\",\r\n    \"lastName\": \"Alvarez\",\r\n    \"email\": \"nati@gmail.com\",\r\n    \"password\": \"12345\",\r\n    \"phone\": \"97869845\",\r\n    \"userStatus\": 0\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://petstore.swagger.io/v2/user/{{username}}"
+			},
+			"response": []
+		},
+		{
+			"name": "API elimina usuario",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7eb96d1a-e4de-4bb9-acb8-c9bf028511d0",
+						"exec": [
+							"\r",
+							"\r",
+							"pm.test(\"Validad que la respuesta es exitosa(200)\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Valida que el Header contenga Date\", function () {\r",
+							"    pm.response.to.have.header(\"Date\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Valida que el tiempo de respuesta sea menor a 700\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Valida que el nombre del status sea ok\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"id": "7e6e7938-6c35-47d3-9b60-17fa9b5069c5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "https://petstore.swagger.io/v2/user/{{username}}"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "5e5f7e66-d4ef-4533-b477-a2ffe2c24bb4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "12355ced-ce4d-4830-96a9-4b199983a027",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

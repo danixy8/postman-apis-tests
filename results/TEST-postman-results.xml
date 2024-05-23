@@ -1,0 +1,1155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Coffee-node" tests="24" time="0.000">
+  <testsuite name="Actualizacion e Inicio de sesión / Crear Usuario" id="b0e91042-ae6d-4a91-a8e8-5ff51a1b609c" timestamp="2024-05-23T21:28:03.917Z" tests="9" failures="9" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+    <testcase name="Prueba 1: Validad que la respuesta es exitosa(200)" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / Crear Usuario.]]>
+        <![CDATA[Test description: Prueba 1: Validad que la respuesta es exitosa(200).]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:1).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 2: Valida que el Header contenga Date" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected false to be true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / Crear Usuario.]]>
+        <![CDATA[Test description: Prueba 2: Valida que el Header contenga Date.]]>
+        <![CDATA[Error message: expected false to be true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be true
+   at Object.eval sandbox-script.js:2:1).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 3: Valida que el tiempo de respuesta sea menor a 700" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected undefined to be a number or a date">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / Crear Usuario.]]>
+        <![CDATA[Test description: Prueba 3: Valida que el tiempo de respuesta sea menor a 700.]]>
+        <![CDATA[Error message: expected undefined to be a number or a date.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to be a number or a date
+   at Object.eval sandbox-script.js:3:1).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 4: Valida que el nombre del status sea ok" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected response to have status reason 'OK' but got undefined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / Crear Usuario.]]>
+        <![CDATA[Test description: Prueba 4: Valida que el nombre del status sea ok.]]>
+        <![CDATA[Error message: expected response to have status reason 'OK' but got undefined.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status reason 'OK' but got undefined
+   at Object.eval sandbox-script.js:4:1).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 5: Valida que respuesta contenga ID" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / Crear Usuario.]]>
+        <![CDATA[Test description: Prueba 5: Valida que respuesta contenga ID.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:5:1).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 8: Valida si la propiedad state si existe y es true" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="Unexpected token u in JSON at position 0">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / Crear Usuario.]]>
+        <![CDATA[Test description: Prueba 8: Valida si la propiedad state si existe y es true.]]>
+        <![CDATA[Error message: Unexpected token u in JSON at position 0.]]>
+        <![CDATA[Stacktrace: JSONError: Unexpected token u in JSON at position 0
+   at Object.eval sandbox-script.js:6:1).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 9: Valida si las propiedad state es true" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="Unexpected token u in JSON at position 0">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / Crear Usuario.]]>
+        <![CDATA[Test description: Prueba 9: Valida si las propiedad state es true.]]>
+        <![CDATA[Error message: Unexpected token u in JSON at position 0.]]>
+        <![CDATA[Stacktrace: JSONError: Unexpected token u in JSON at position 0
+   at Object.eval sandbox-script.js:7:1).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 10: Valida si la propiedad state si existe y es true" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="Unexpected token u in JSON at position 0">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / Crear Usuario.]]>
+        <![CDATA[Test description: Prueba 10: Valida si la propiedad state si existe y es true.]]>
+        <![CDATA[Error message: Unexpected token u in JSON at position 0.]]>
+        <![CDATA[Stacktrace: JSONError: Unexpected token u in JSON at position 0
+   at Object.eval sandbox-script.js:8:1).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 11: Valida si las propiedad state es true" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="Unexpected token u in JSON at position 0">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / Crear Usuario.]]>
+        <![CDATA[Test description: Prueba 11: Valida si las propiedad state es true.]]>
+        <![CDATA[Error message: Unexpected token u in JSON at position 0.]]>
+        <![CDATA[Stacktrace: JSONError: Unexpected token u in JSON at position 0
+   at Object.eval sandbox-script.js:9:1).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Actualizacion e Inicio de sesión / Login" id="fac7327b-9baf-4214-a451-e7602508d863" timestamp="2024-05-23T21:28:03.917Z" tests="10" failures="10" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+    <testcase name="Prueba 1: Validad que la respuesta es exitosa(200)" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / Login.]]>
+        <![CDATA[Test description: Prueba 1: Validad que la respuesta es exitosa(200).]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:2).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 2:Valida que el Header contenga Date" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected response to have header with key 'Date'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / Login.]]>
+        <![CDATA[Test description: Prueba 2:Valida que el Header contenga Date.]]>
+        <![CDATA[Error message: expected response to have header with key 'Date'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have header with key 'Date'
+   at Object.eval sandbox-script.js:2:2).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 3:Valida que el tiempo de respuesta sea menor a 700" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected undefined to be a number or a date">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / Login.]]>
+        <![CDATA[Test description: Prueba 3:Valida que el tiempo de respuesta sea menor a 700.]]>
+        <![CDATA[Error message: expected undefined to be a number or a date.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to be a number or a date
+   at Object.eval sandbox-script.js:3:2).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 4:Valida que el nombre del status sea ok" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected response to have status reason 'OK' but got undefined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / Login.]]>
+        <![CDATA[Test description: Prueba 4:Valida que el nombre del status sea ok.]]>
+        <![CDATA[Error message: expected response to have status reason 'OK' but got undefined.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status reason 'OK' but got undefined
+   at Object.eval sandbox-script.js:4:2).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 5:Valida que respuesta contenga Token" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / Login.]]>
+        <![CDATA[Test description: Prueba 5:Valida que respuesta contenga Token.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:5:2).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 6:Valida que respuesta contenga ID" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 2 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / Login.]]>
+        <![CDATA[Test description: Prueba 6:Valida que respuesta contenga ID.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:6:2).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 7:Valida que el header Content-Type" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected response to have header with key 'Content-Type'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / Login.]]>
+        <![CDATA[Test description: Prueba 7:Valida que el header Content-Type.]]>
+        <![CDATA[Error message: expected response to have header with key 'Content-Type'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have header with key 'Content-Type'
+   at Object.eval sandbox-script.js:8:2).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 8: Valida si la propiedad state si existe y es true" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="Unexpected token u in JSON at position 0">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / Login.]]>
+        <![CDATA[Test description: Prueba 8: Valida si la propiedad state si existe y es true.]]>
+        <![CDATA[Error message: Unexpected token u in JSON at position 0.]]>
+        <![CDATA[Stacktrace: JSONError: Unexpected token u in JSON at position 0
+   at Object.eval sandbox-script.js:9:2).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 9: Valida si las propiedad state es true" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="Unexpected token u in JSON at position 0">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / Login.]]>
+        <![CDATA[Test description: Prueba 9: Valida si las propiedad state es true.]]>
+        <![CDATA[Error message: Unexpected token u in JSON at position 0.]]>
+        <![CDATA[Stacktrace: JSONError: Unexpected token u in JSON at position 0
+   at Object.eval sandbox-script.js:10:2).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Actualizacion e Inicio de sesión / google signin***" id="9c00ac06-b581-4862-9620-d7d1f75ee27e" timestamp="2024-05-23T21:28:03.917Z" tests="6" failures="6" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+    <testcase name="Prueba 1: Validad que la respuesta es exitosa(200)" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / google signin***.]]>
+        <![CDATA[Test description: Prueba 1: Validad que la respuesta es exitosa(200).]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:3).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 2:Valida que el Header contenga Date" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected response to have header with key 'Date'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / google signin***.]]>
+        <![CDATA[Test description: Prueba 2:Valida que el Header contenga Date.]]>
+        <![CDATA[Error message: expected response to have header with key 'Date'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have header with key 'Date'
+   at Object.eval sandbox-script.js:2:3).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 3:Valida que el tiempo de respuesta sea menor a 700" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected undefined to be a number or a date">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / google signin***.]]>
+        <![CDATA[Test description: Prueba 3:Valida que el tiempo de respuesta sea menor a 700.]]>
+        <![CDATA[Error message: expected undefined to be a number or a date.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to be a number or a date
+   at Object.eval sandbox-script.js:3:3).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 4:Valida que el nombre del status sea ok" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected response to have status reason 'OK' but got undefined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / google signin***.]]>
+        <![CDATA[Test description: Prueba 4:Valida que el nombre del status sea ok.]]>
+        <![CDATA[Error message: expected response to have status reason 'OK' but got undefined.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status reason 'OK' but got undefined
+   at Object.eval sandbox-script.js:4:3).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 5:Valida que respuesta contenga Token" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / google signin***.]]>
+        <![CDATA[Test description: Prueba 5:Valida que respuesta contenga Token.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:5:3).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 7:Valida que el header Content-Type" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected response to have header with key 'Content-Type'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Actualizacion e Inicio de sesión / google signin***.]]>
+        <![CDATA[Test description: Prueba 7:Valida que el header Content-Type.]]>
+        <![CDATA[Error message: expected response to have header with key 'Content-Type'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have header with key 'Content-Type'
+   at Object.eval sandbox-script.js:6:3).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Actualizacion e Inicio de sesión / Actualizar usuario por ID" id="94466224-aca7-4fd8-8e61-fea88aec0342" timestamp="2024-05-23T21:28:03.917Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Solicitud y eliminación de usuario / obtener usuario paginado" id="9e3da629-5712-4c0c-a1a8-d5356cc85ad2" timestamp="2024-05-23T21:28:03.917Z" tests="6" failures="6" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+    <testcase name="Prueba 1: Validad que la respuesta es exitosa(200)" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / obtener usuario paginado.]]>
+        <![CDATA[Test description: Prueba 1: Validad que la respuesta es exitosa(200).]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:5).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 2:Valida que el Header contenga Date" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected response to have header with key 'Date'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / obtener usuario paginado.]]>
+        <![CDATA[Test description: Prueba 2:Valida que el Header contenga Date.]]>
+        <![CDATA[Error message: expected response to have header with key 'Date'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have header with key 'Date'
+   at Object.eval sandbox-script.js:2:5).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 3:Valida que el tiempo de respuesta sea menor a 400" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected undefined to be a number or a date">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / obtener usuario paginado.]]>
+        <![CDATA[Test description: Prueba 3:Valida que el tiempo de respuesta sea menor a 400.]]>
+        <![CDATA[Error message: expected undefined to be a number or a date.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to be a number or a date
+   at Object.eval sandbox-script.js:3:5).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 4:Valida que el nombre del status sea ok" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected response to have status reason 'OK' but got undefined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / obtener usuario paginado.]]>
+        <![CDATA[Test description: Prueba 4:Valida que el nombre del status sea ok.]]>
+        <![CDATA[Error message: expected response to have status reason 'OK' but got undefined.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status reason 'OK' but got undefined
+   at Object.eval sandbox-script.js:4:5).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 5:Valida que respuesta contenga total" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / obtener usuario paginado.]]>
+        <![CDATA[Test description: Prueba 5:Valida que respuesta contenga total.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:5:5).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 6:Valida que el header Content-Type" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected response to have header with key 'Content-Type'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / obtener usuario paginado.]]>
+        <![CDATA[Test description: Prueba 6:Valida que el header Content-Type.]]>
+        <![CDATA[Error message: expected response to have header with key 'Content-Type'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have header with key 'Content-Type'
+   at Object.eval sandbox-script.js:6:5).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Solicitud y eliminación de usuario / obtener usuario por ID" id="cd3ec082-bc38-4beb-9b30-8a41022a19e2" timestamp="2024-05-23T21:28:03.917Z" tests="7" failures="7" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+    <testcase name="Prueba 1: Validad que la respuesta es exitosa(200)" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / obtener usuario por ID.]]>
+        <![CDATA[Test description: Prueba 1: Validad que la respuesta es exitosa(200).]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:6).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 2: Valida que el Header contenga Date" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected false to be true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / obtener usuario por ID.]]>
+        <![CDATA[Test description: Prueba 2: Valida que el Header contenga Date.]]>
+        <![CDATA[Error message: expected false to be true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be true
+   at Object.eval sandbox-script.js:2:6).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 3: Valida que el tiempo de respuesta sea menor a 700" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected undefined to be a number or a date">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / obtener usuario por ID.]]>
+        <![CDATA[Test description: Prueba 3: Valida que el tiempo de respuesta sea menor a 700.]]>
+        <![CDATA[Error message: expected undefined to be a number or a date.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to be a number or a date
+   at Object.eval sandbox-script.js:3:6).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 4: Valida que el nombre del status sea ok" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected response to have status reason 'OK' but got undefined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / obtener usuario por ID.]]>
+        <![CDATA[Test description: Prueba 4: Valida que el nombre del status sea ok.]]>
+        <![CDATA[Error message: expected response to have status reason 'OK' but got undefined.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status reason 'OK' but got undefined
+   at Object.eval sandbox-script.js:4:6).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 5: Valida que respuesta contenga name" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / obtener usuario por ID.]]>
+        <![CDATA[Test description: Prueba 5: Valida que respuesta contenga name.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:5:6).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 8: Valida si la propiedad state si existe y es true" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="Unexpected token u in JSON at position 0">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / obtener usuario por ID.]]>
+        <![CDATA[Test description: Prueba 8: Valida si la propiedad state si existe y es true.]]>
+        <![CDATA[Error message: Unexpected token u in JSON at position 0.]]>
+        <![CDATA[Stacktrace: JSONError: Unexpected token u in JSON at position 0
+   at Object.eval sandbox-script.js:6:6).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 9: Valida si las propiedad google es false" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="Unexpected token u in JSON at position 0">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / obtener usuario por ID.]]>
+        <![CDATA[Test description: Prueba 9: Valida si las propiedad google es false.]]>
+        <![CDATA[Error message: Unexpected token u in JSON at position 0.]]>
+        <![CDATA[Stacktrace: JSONError: Unexpected token u in JSON at position 0
+   at Object.eval sandbox-script.js:7:6).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Solicitud y eliminación de usuario / Eliminar usuario ID***" id="97ee74d6-ba09-419b-8010-b60efaf6e4ee" timestamp="2024-05-23T21:28:03.917Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Solicitud y eliminación de usuario / Buscar usuario x nombre" id="c618c4db-16db-4cf8-8013-4e559f0f2b96" timestamp="2024-05-23T21:28:03.917Z" tests="9" failures="9" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+    <testcase name="Prueba 1: Validad que la respuesta es exitosa(200)" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / Buscar usuario x nombre.]]>
+        <![CDATA[Test description: Prueba 1: Validad que la respuesta es exitosa(200).]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:8).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 2: Valida que el Header contenga Date" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected false to be true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / Buscar usuario x nombre.]]>
+        <![CDATA[Test description: Prueba 2: Valida que el Header contenga Date.]]>
+        <![CDATA[Error message: expected false to be true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be true
+   at Object.eval sandbox-script.js:2:8).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 3: Valida que el tiempo de respuesta sea menor a 500" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected undefined to be a number or a date">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / Buscar usuario x nombre.]]>
+        <![CDATA[Test description: Prueba 3: Valida que el tiempo de respuesta sea menor a 500.]]>
+        <![CDATA[Error message: expected undefined to be a number or a date.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to be a number or a date
+   at Object.eval sandbox-script.js:3:8).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 4: Valida que el nombre del status sea ok" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected response to have status reason 'OK' but got undefined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / Buscar usuario x nombre.]]>
+        <![CDATA[Test description: Prueba 4: Valida que el nombre del status sea ok.]]>
+        <![CDATA[Error message: expected response to have status reason 'OK' but got undefined.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status reason 'OK' but got undefined
+   at Object.eval sandbox-script.js:4:8).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 5: Valida que respuesta contenga ID" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / Buscar usuario x nombre.]]>
+        <![CDATA[Test description: Prueba 5: Valida que respuesta contenga ID.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:5:8).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 8: Valida si la propiedad state si existe y es true" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="Unexpected token u in JSON at position 0">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / Buscar usuario x nombre.]]>
+        <![CDATA[Test description: Prueba 8: Valida si la propiedad state si existe y es true.]]>
+        <![CDATA[Error message: Unexpected token u in JSON at position 0.]]>
+        <![CDATA[Stacktrace: JSONError: Unexpected token u in JSON at position 0
+   at Object.eval sandbox-script.js:6:8).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 9: Valida si las propiedad state es false" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="Unexpected token u in JSON at position 0">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / Buscar usuario x nombre.]]>
+        <![CDATA[Test description: Prueba 9: Valida si las propiedad state es false.]]>
+        <![CDATA[Error message: Unexpected token u in JSON at position 0.]]>
+        <![CDATA[Stacktrace: JSONError: Unexpected token u in JSON at position 0
+   at Object.eval sandbox-script.js:7:8).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 10: Valida que respuesta contenga password" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / Buscar usuario x nombre.]]>
+        <![CDATA[Test description: Prueba 10: Valida que respuesta contenga password.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:8:8).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 11: Valida que respuesta contenga results" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Solicitud y eliminación de usuario / Buscar usuario x nombre.]]>
+        <![CDATA[Test description: Prueba 11: Valida que respuesta contenga results.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:9:8).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Categoria / Creación categorías****" id="ad133644-8dce-4cbc-96fa-939cc457ac34" timestamp="2024-05-23T21:28:03.917Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Categoria / Actualizar categorias por ID****" id="a76d0ded-7530-447b-b623-feba54a6b09a" timestamp="2024-05-23T21:28:03.917Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Categoria / Eliminar categoria ID" id="e7ed7057-34cb-42d1-9e59-2a43b12c3748" timestamp="2024-05-23T21:28:03.917Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Categoria / Buscar Categoria por nombre o ID" id="952d0354-5ef5-4abc-b897-3d7aa63a5dbc" timestamp="2024-05-23T21:28:03.917Z" tests="8" failures="8" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+    <testcase name="Prueba 1: Validad que la respuesta es exitosa(200)" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Buscar Categoria por nombre o ID.]]>
+        <![CDATA[Test description: Prueba 1: Validad que la respuesta es exitosa(200).]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:12).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 2: Valida que el Header contenga Date" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected false to be true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Buscar Categoria por nombre o ID.]]>
+        <![CDATA[Test description: Prueba 2: Valida que el Header contenga Date.]]>
+        <![CDATA[Error message: expected false to be true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be true
+   at Object.eval sandbox-script.js:2:12).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 3: Valida que el tiempo de respuesta sea menor a 500" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected undefined to be a number or a date">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Buscar Categoria por nombre o ID.]]>
+        <![CDATA[Test description: Prueba 3: Valida que el tiempo de respuesta sea menor a 500.]]>
+        <![CDATA[Error message: expected undefined to be a number or a date.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to be a number or a date
+   at Object.eval sandbox-script.js:3:12).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 4: Valida que el nombre del status sea ok" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected response to have status reason 'OK' but got undefined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Buscar Categoria por nombre o ID.]]>
+        <![CDATA[Test description: Prueba 4: Valida que el nombre del status sea ok.]]>
+        <![CDATA[Error message: expected response to have status reason 'OK' but got undefined.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status reason 'OK' but got undefined
+   at Object.eval sandbox-script.js:4:12).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 5: Valida que respuesta contenga ID" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Buscar Categoria por nombre o ID.]]>
+        <![CDATA[Test description: Prueba 5: Valida que respuesta contenga ID.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:5:12).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 8: Validar que la respuesta contenga NAME" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Buscar Categoria por nombre o ID.]]>
+        <![CDATA[Test description: Prueba 8: Validar que la respuesta contenga NAME.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:6:12).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 9: Validar que la respuesta contenga User" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Buscar Categoria por nombre o ID.]]>
+        <![CDATA[Test description: Prueba 9: Validar que la respuesta contenga User.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:7:12).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 10: Valida que respuesta contenga results" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Buscar Categoria por nombre o ID.]]>
+        <![CDATA[Test description: Prueba 10: Valida que respuesta contenga results.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:8:12).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Categoria / Obtener categorias paginado" id="964b383b-9a76-42cf-8a7d-4f2748a2ee1d" timestamp="2024-05-23T21:28:03.917Z" tests="9" failures="9" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+    <testcase name="Prueba 1: Validad que la respuesta es exitosa(200)" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Obtener categorias paginado.]]>
+        <![CDATA[Test description: Prueba 1: Validad que la respuesta es exitosa(200).]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:13).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 2: Valida que el Header contenga Date" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected false to be true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Obtener categorias paginado.]]>
+        <![CDATA[Test description: Prueba 2: Valida que el Header contenga Date.]]>
+        <![CDATA[Error message: expected false to be true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be true
+   at Object.eval sandbox-script.js:2:13).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 3: Valida que el tiempo de respuesta sea menor a 1300" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected undefined to be a number or a date">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Obtener categorias paginado.]]>
+        <![CDATA[Test description: Prueba 3: Valida que el tiempo de respuesta sea menor a 1300.]]>
+        <![CDATA[Error message: expected undefined to be a number or a date.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to be a number or a date
+   at Object.eval sandbox-script.js:3:13).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 4: Valida que el nombre del status sea ok" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected response to have status reason 'OK' but got undefined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Obtener categorias paginado.]]>
+        <![CDATA[Test description: Prueba 4: Valida que el nombre del status sea ok.]]>
+        <![CDATA[Error message: expected response to have status reason 'OK' but got undefined.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status reason 'OK' but got undefined
+   at Object.eval sandbox-script.js:4:13).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 5: Valida que respuesta contenga categories" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Obtener categorias paginado.]]>
+        <![CDATA[Test description: Prueba 5: Valida que respuesta contenga categories.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:5:13).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 8: Validar que la respuesta contenga NAME" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Obtener categorias paginado.]]>
+        <![CDATA[Test description: Prueba 8: Validar que la respuesta contenga NAME.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:6:13).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 9: Validar que la respuesta contenga _id" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Obtener categorias paginado.]]>
+        <![CDATA[Test description: Prueba 9: Validar que la respuesta contenga _id.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:7:13).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 10: Valida que respuesta contenga total" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Obtener categorias paginado.]]>
+        <![CDATA[Test description: Prueba 10: Valida que respuesta contenga total.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:8:13).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 11:La respuesta no debería contener errores y debe ser un JSON válido" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Obtener categorias paginado.]]>
+        <![CDATA[Test description: Prueba 11:La respuesta no debería contener errores y debe ser un JSON válido.]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:9:13).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Categoria / Obtener categoria ID" id="0056b657-6d4e-4ec5-934e-aeeee4dd4152" timestamp="2024-05-23T21:28:03.917Z" tests="8" failures="8" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+    <testcase name="Prueba 1: Validad que la respuesta es exitosa(200)" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Obtener categoria ID.]]>
+        <![CDATA[Test description: Prueba 1: Validad que la respuesta es exitosa(200).]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:14).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 2: Valida que el Header contenga Date" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected false to be true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Obtener categoria ID.]]>
+        <![CDATA[Test description: Prueba 2: Valida que el Header contenga Date.]]>
+        <![CDATA[Error message: expected false to be true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be true
+   at Object.eval sandbox-script.js:2:14).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 3: Valida que el tiempo de respuesta sea menor a 800" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected undefined to be a number or a date">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Obtener categoria ID.]]>
+        <![CDATA[Test description: Prueba 3: Valida que el tiempo de respuesta sea menor a 800.]]>
+        <![CDATA[Error message: expected undefined to be a number or a date.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to be a number or a date
+   at Object.eval sandbox-script.js:3:14).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 4: Valida que el nombre del status sea ok" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected response to have status reason 'OK' but got undefined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Obtener categoria ID.]]>
+        <![CDATA[Test description: Prueba 4: Valida que el nombre del status sea ok.]]>
+        <![CDATA[Error message: expected response to have status reason 'OK' but got undefined.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status reason 'OK' but got undefined
+   at Object.eval sandbox-script.js:4:14).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 5: Valida que respuesta contenga ID" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Obtener categoria ID.]]>
+        <![CDATA[Test description: Prueba 5: Valida que respuesta contenga ID.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:5:14).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 8: Validar que la respuesta contenga NAME" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Obtener categoria ID.]]>
+        <![CDATA[Test description: Prueba 8: Validar que la respuesta contenga NAME.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:6:14).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 9: Validar que la respuesta contenga User" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Obtener categoria ID.]]>
+        <![CDATA[Test description: Prueba 9: Validar que la respuesta contenga User.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:7:14).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 10: Valida que respuesta contenga category" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Categoria / Obtener categoria ID.]]>
+        <![CDATA[Test description: Prueba 10: Valida que respuesta contenga category.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:8:14).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Productos / Crear producto" id="4b7144c2-3aa6-438f-9295-05c89b00dae0" timestamp="2024-05-23T21:28:03.917Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Productos / Obtener productos" id="af9096c8-1bc5-446c-8deb-bf9dd7f4c076" timestamp="2024-05-23T21:28:03.917Z" tests="9" failures="9" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+    <testcase name="Prueba 1: Validad que la respuesta es exitosa(200)" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Productos / Obtener productos.]]>
+        <![CDATA[Test description: Prueba 1: Validad que la respuesta es exitosa(200).]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:1:16).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 2: Valida que el Header contenga Date" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected false to be true">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Productos / Obtener productos.]]>
+        <![CDATA[Test description: Prueba 2: Valida que el Header contenga Date.]]>
+        <![CDATA[Error message: expected false to be true.]]>
+        <![CDATA[Stacktrace: AssertionError: expected false to be true
+   at Object.eval sandbox-script.js:2:16).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 3: Valida que el tiempo de respuesta sea menor a 1000" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected undefined to be a number or a date">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Productos / Obtener productos.]]>
+        <![CDATA[Test description: Prueba 3: Valida que el tiempo de respuesta sea menor a 1000.]]>
+        <![CDATA[Error message: expected undefined to be a number or a date.]]>
+        <![CDATA[Stacktrace: AssertionError: expected undefined to be a number or a date
+   at Object.eval sandbox-script.js:3:16).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 4: Valida que el nombre del status sea ok" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected response to have status reason 'OK' but got undefined">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Productos / Obtener productos.]]>
+        <![CDATA[Test description: Prueba 4: Valida que el nombre del status sea ok.]]>
+        <![CDATA[Error message: expected response to have status reason 'OK' but got undefined.]]>
+        <![CDATA[Stacktrace: AssertionError: expected response to have status reason 'OK' but got undefined
+   at Object.eval sandbox-script.js:4:16).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 5: Valida que respuesta contenga ID" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Productos / Obtener productos.]]>
+        <![CDATA[Test description: Prueba 5: Valida que respuesta contenga ID.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:5:16).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 8: Validar que la respuesta contenga NAME" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Productos / Obtener productos.]]>
+        <![CDATA[Test description: Prueba 8: Validar que la respuesta contenga NAME.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:6:16).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 9: Validar que la respuesta contenga User" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Productos / Obtener productos.]]>
+        <![CDATA[Test description: Prueba 9: Validar que la respuesta contenga User.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:7:16).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 10: Valida que respuesta contenga products" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Productos / Obtener productos.]]>
+        <![CDATA[Test description: Prueba 10: Valida que respuesta contenga products.]]>
+        <![CDATA[Error message: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string.]]>
+        <![CDATA[Stacktrace: AssertionError: the given combination of arguments (undefined and string) is invalid for this assertion. You can use an array, a map, an object, a set, a string, or a weakset instead of a string
+   at Object.eval sandbox-script.js:8:16).]]>
+      </failure>
+    </testcase>
+    <testcase name="Prueba 11:La respuesta no debería contener errores y debe ser un JSON válido" time="0.000" classname="CoffeeNode">
+      <failure type="AssertionFailure" message="expected { Object (id, _details, ...) } to have property 'code'">
+        <![CDATA[Failed 1 times.]]>
+        <![CDATA[Collection JSON ID: 5db223d8-6d65-4337-a383-c950d2a8be9c.]]>
+        <![CDATA[Collection name: Coffee-node.]]>
+        <![CDATA[Request name: Productos / Obtener productos.]]>
+        <![CDATA[Test description: Prueba 11:La respuesta no debería contener errores y debe ser un JSON válido.]]>
+        <![CDATA[Error message: expected { Object (id, _details, ...) } to have property 'code'.]]>
+        <![CDATA[Stacktrace: AssertionError: expected { Object (id, _details, ...) } to have property 'code'
+   at Object.eval sandbox-script.js:9:16).]]>
+      </failure>
+    </testcase>
+  </testsuite>
+  <testsuite name="Productos / Obtener producto x ID" id="b42a107c-1ce3-47e7-8a0b-d2c10d6f7f54" timestamp="2024-05-23T21:28:03.917Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Productos / Eliminar producto x ID" id="670669ae-f51c-449b-a3de-b55e31ff650f" timestamp="2024-05-23T21:28:03.917Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Productos / Actualizar productos x ID" id="f302a07b-7742-44c7-bf8d-941564633977" timestamp="2024-05-23T21:28:03.917Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Productos / Buscar Productos x Categoria" id="325267b2-efeb-4cff-9674-83c53ce35d11" timestamp="2024-05-23T21:28:03.917Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Productos / Buscar productos por nombre o ID" id="ebe5250a-0033-40f8-a002-abeccfa5348d" timestamp="2024-05-23T21:28:03.917Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Carga de archivos / Cargar archivos" id="f3de4d84-cdf1-4374-8f0b-b002399ca9c9" timestamp="2024-05-23T21:28:03.917Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Carga de archivos / Cargar archivos x nombre de coleccion e ID del registro" id="0ebd30d4-41f8-4908-a8ce-87113a89b588" timestamp="2024-05-23T21:28:03.917Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+  </testsuite>
+  <testsuite name="Carga de archivos / Mostrar imagenes por coleccion usando ID de registro" id="b1e75458-3e95-4658-ae1b-8dedc89c2549" timestamp="2024-05-23T21:28:03.917Z" tests="0" failures="0" errors="1" time="0.000">
+    <system-err><![CDATA[Iteration: 0
+RequestError: Error: getaddrinfo ENOTFOUND {{host}}
+    at GetAddrInfoReqWrap.onlookup [as oncomplete] (node:dns:107:26)
+
+---
+]]></system-err>
+  </testsuite>
+</testsuites>

@@ -1,0 +1,986 @@
+{
+	"info": {
+		"_postman_id": "5db223d8-6d65-4337-a383-c950d2a8be9c",
+		"name": "Coffee-node",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Actualizacion e Inicio de sesión",
+			"item": [
+				{
+					"name": "Crear Usuario",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "3becf1fe-b1d0-4015-a3cd-f97f831bbf3c",
+								"exec": [
+									"pm.test(\"Prueba 1: Validad que la respuesta es exitosa(200)\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 2: Valida que el Header contenga Date\", function () {\r",
+									"    pm.expect(pm.response.headers.has(\"Date\")).to.be.true;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Prueba 3: Valida que el tiempo de respuesta sea menor a 700\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 4: Valida que el nombre del status sea ok\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 5: Valida que respuesta contenga ID\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"uid\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 8: Valida si la propiedad state si existe y es true\", () => {\r",
+									"    const responseJson = pm.response.json();\r",
+									"    // Verifica si la propiedad state existe y es true\r",
+									"    pm.expect(responseJson.user.state).to.exist;\r",
+									"    pm.expect(responseJson.user.state).to.be.true;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 9: Valida si las propiedad state es true\", () => {\r",
+									"    const responseJson = pm.response.json();\r",
+									"    // Verifica el valor booleano de la propiedad\r",
+									"    pm.expect(responseJson.user.state).to.be.true;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 10: Valida si la propiedad state si existe y es true\", () => {\r",
+									"    const responseJson = pm.response.json();\r",
+									"    // Verifica si la propiedad state existe y es true\r",
+									"    pm.expect(responseJson.user.state).to.exist;\r",
+									"    pm.expect(responseJson.user.state).to.be.true;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 11: Valida si las propiedad state es true\", () => {\r",
+									"    const responseJson = pm.response.json();\r",
+									"    // Verifica el valor booleano de la propiedad\r",
+									"    pm.expect(responseJson.user.state).to.be.true;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "6366852a-a519-4bf8-8e80-ffc944206ed6",
+								"exec": [
+									"pm.globals.set(\"username\", pm.variables.replaceIn('{{$randomUserName}}'));\r",
+									"pm.globals.set(\"firstName\", pm.variables.replaceIn('{{$randomFirstName}}'));\r",
+									"pm.globals.set(\"lastName\", pm.variables.replaceIn('{{$randomLastName}}'));\r",
+									"pm.globals.set(\"email\", pm.variables.replaceIn('{{$randomEmail}}'));\r",
+									"pm.globals.set(\"password\", pm.variables.replaceIn('{{$randomPassword}}'));\r",
+									"pm.globals.set(\"phone\", pm.variables.replaceIn('{{$randomPhoneNumber}}'));\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "b0e91042-ae6d-4a91-a8e8-5ff51a1b609c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n     \"name\":\"{{username}}\",\r\n    \"email\":\"{{email}}\",\r\n    \"password\":\"{{password}}\",\r\n    \"role\":\"SALES_ROLE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/api/users/"
+					},
+					"response": []
+				},
+				{
+					"name": "Login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "2cca18f3-4c9e-41d6-986d-8a17d2b71667",
+								"exec": [
+									"pm.test(\"Prueba 1: Validad que la respuesta es exitosa(200)\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 2:Valida que el Header contenga Date\", function () {\r",
+									"    pm.response.to.have.header(\"Date\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 3:Valida que el tiempo de respuesta sea menor a 700\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 4:Valida que el nombre del status sea ok\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 5:Valida que respuesta contenga Token\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"token\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 6:Valida que respuesta contenga ID\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"uid\");\r",
+									"});\r",
+									"pm.test(\"Prueba 6:Valida que respuesta contenga ID\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"uid\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 7:Valida que el header Content-Type\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 8: Valida si la propiedad state si existe y es true\", () => {\r",
+									"    const responseJson = pm.response.json();\r",
+									"    // Verifica si la propiedad state existe y es true\r",
+									"    pm.expect(responseJson.user.state).to.exist;\r",
+									"    pm.expect(responseJson.user.state).to.be.true;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 9: Valida si las propiedad state es true\", () => {\r",
+									"    const responseJson = pm.response.json();\r",
+									"    // Verifica el valor booleano de la propiedad\r",
+									"    pm.expect(responseJson.user.state).to.be.true;\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "fac7327b-9baf-4214-a451-e7602508d863",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"{{email}}\",\r\n    \"password\":\"{{password}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/api/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "google signin***",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "02b44eb9-afad-485f-a712-708f42e3f4cb",
+								"exec": [
+									"pm.test(\"Prueba 1: Validad que la respuesta es exitosa(200)\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 2:Valida que el Header contenga Date\", function () {\r",
+									"    pm.response.to.have.header(\"Date\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 3:Valida que el tiempo de respuesta sea menor a 700\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(700);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 4:Valida que el nombre del status sea ok\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 5:Valida que respuesta contenga Token\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"token\");\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Prueba 7:Valida que el header Content-Type\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "9c00ac06-b581-4862-9620-d7d1f75ee27e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTgwNGE2OTkyNTIzZjkyY2VkOGY2NmEiLCJpYXQiOjE3MDI5MDY4MzMsImV4cCI6MTcwMjkzNTYzM30.T7aoe0T9JpHLbXSVKZ26MmUf_cuIvEWf6gju8p56Oo4\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/api/auth/google"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar usuario por ID",
+					"id": "94466224-aca7-4fd8-8e61-fea88aec0342",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Dayana Perez\",\r\n    \"google\":true,\r\n    \"email\":\"daya80@gmail.com\",\r\n    \"password\":\"1234567780\",\r\n    \"role\":\"ADMIN_ROLE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/api/users/65772748a973c202e5bc80b0"
+					},
+					"response": []
+				}
+			],
+			"id": "2fb5b3f2-9d4e-400b-ab4b-8dc97011bb14"
+		},
+		{
+			"name": "Solicitud y eliminación de usuario",
+			"item": [
+				{
+					"name": "obtener usuario paginado",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "51a4f45b-6e2d-4c7e-925b-23964c8d25ab",
+								"exec": [
+									"pm.test(\"Prueba 1: Validad que la respuesta es exitosa(200)\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 2:Valida que el Header contenga Date\", function () {\r",
+									"    pm.response.to.have.header(\"Date\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 3:Valida que el tiempo de respuesta sea menor a 400\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(400);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 4:Valida que el nombre del status sea ok\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 5:Valida que respuesta contenga total\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"total\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 6:Valida que el header Content-Type\", function () {\r",
+									"    pm.response.to.have.header(\"Content-Type\");\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "9e3da629-5712-4c0c-a1a8-d5356cc85ad2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/users?limit=18&from=0",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"users"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "18"
+								},
+								{
+									"key": "from",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "obtener usuario por ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "7ce5e9da-6987-496b-b295-88686ebc04a7",
+								"exec": [
+									"pm.test(\"Prueba 1: Validad que la respuesta es exitosa(200)\", function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 2: Valida que el Header contenga Date\", function () {\r",
+									"    pm.expect(pm.response.headers.has(\"Date\")).to.be.true;\r",
+									"});\r",
+									"\r",
+									"\r",
+									"pm.test(\"Prueba 3: Valida que el tiempo de respuesta sea menor a 700\", function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1500);\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 4: Valida que el nombre del status sea ok\", function () {\r",
+									"    pm.response.to.have.status(\"OK\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 5: Valida que respuesta contenga name\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 8: Valida si la propiedad state si existe y es true\", () => {\r",
+									"    const responseJson = pm.response.json();\r",
+									"    // Verifica si la propiedad state existe y es true\r",
+									"    pm.expect(responseJson.user.state).to.exist;\r",
+									"    pm.expect(responseJson.user.state).to.be.true;\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 9: Valida si las propiedad google es false\", () => {\r",
+									"    const responseJson = pm.response.json();\r",
+									"    // Verifica el valor booleano de la propiedad\r",
+									"    pm.expect(responseJson.user.google).to.be.false;\r",
+									"});\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "cd3ec082-bc38-4beb-9b30-8a41022a19e2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/api/users/62fabb2906d55ee88cd06d7d"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar usuario ID***",
+					"id": "97ee74d6-ba09-419b-8010-b60efaf6e4ee",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "x-token",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2NTc5Y2Q0YjkyNTIzZjkyY2VkOGY2MDEiLCJpYXQiOjE3MDI0ODI4MjQsImV4cCI6MTcwMjUxMTYyNH0.OuHpFl-DHXA1M9FK69erBi8KK2YoAm3_w1QlFN3eRqI",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"_id\":\"657c74a992523f92ced8f664\",\r\n    \"name\": \"Eulah.Reichert90 \",\r\n    \"google\":false,\r\n    \"email\":\"Brenda10@yahoo.com\",\r\n    \"password\":\"xlssk4me3r4LEgPM4ECtgeeE1yHTtIV47rXBtgM/lYabBlieiagxq\",\r\n    \"role\":\"SALES_ROLE\"\r\n}\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/api/users/6579cd4b92523f92ced8f601"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar usuario x nombre",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "e7eb8867-dbdb-4395-937c-79da3c647a1d",
+								"exec": [
+									"pm.test('Prueba 1: Validad que la respuesta es exitosa(200)', function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"})\r",
+									"\r",
+									"pm.test('Prueba 2: Valida que el Header contenga Date', function () {\r",
+									"    pm.expect(pm.response.headers.has('Date')).to.be.true;\r",
+									"})\r",
+									"\r",
+									"pm.test('Prueba 3: Valida que el tiempo de respuesta sea menor a 500', function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"})\r",
+									"\r",
+									"pm.test('Prueba 4: Valida que el nombre del status sea ok', function () {\r",
+									"    pm.response.to.have.status('OK');\r",
+									"})\r",
+									"\r",
+									"pm.test('Prueba 5: Valida que respuesta contenga ID', function () {\r",
+									"    pm.expect(pm.response.text()).to.include('_id');\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Prueba 8: Valida si la propiedad state si existe y es true\", () => {\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.results[0].state).to.exist;\r",
+									"    pm.expect(responseJson.results[0].state).to.be.true;\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 9: Valida si las propiedad state es false', () => {\r",
+									"    const responseJson = pm.response.json();\r",
+									"    pm.expect(responseJson.results[0].google).to.be.false;\r",
+									"})\r",
+									"\r",
+									"pm.test('Prueba 10: Valida que respuesta contenga password', function () {\r",
+									"    pm.expect(pm.response.text()).to.include('password');\r",
+									"})\r",
+									"\r",
+									"pm.test('Prueba 11: Valida que respuesta contenga results', function () {\r",
+									"    pm.expect(pm.response.text()).to.include('results');\r",
+									"})\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "c618c4db-16db-4cf8-8013-4e559f0f2b96",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/api/search/users/Eulah.Reichert90"
+					},
+					"response": []
+				}
+			],
+			"id": "6cd4fd14-4d7d-4f6d-82dd-a005df65bc47"
+		},
+		{
+			"name": "Categoria",
+			"item": [
+				{
+					"name": "Creación categorías****",
+					"id": "ad133644-8dce-4cbc-96fa-939cc457ac34",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"TV\",\r\n    \"user\": \"62faba0506d55ee88cd06d55\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/api/categories/"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar categorias por ID****",
+					"id": "a76d0ded-7530-447b-b623-feba54a6b09a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"JARDINERIAS\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/api/categories/6327a78d198186cd61decdc8"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar categoria ID",
+					"id": "e7ed7057-34cb-42d1-9e59-2a43b12c3748",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{host}}/api/categories/65789c7cff050eff6a4c74b7"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Categoria por nombre o ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "cd53c32c-845e-497e-a15b-e42826932909",
+								"exec": [
+									"pm.test('Prueba 1: Validad que la respuesta es exitosa(200)', function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 2: Valida que el Header contenga Date', function () {\r",
+									"    pm.expect(pm.response.headers.has('Date')).to.be.true;\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 3: Valida que el tiempo de respuesta sea menor a 500', function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(500);\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 4: Valida que el nombre del status sea ok', function () {\r",
+									"    pm.response.to.have.status('OK');\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 5: Valida que respuesta contenga ID', function () {\r",
+									"    pm.expect(pm.response.text()).to.include('_id');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 8: Validar que la respuesta contenga NAME\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 9: Validar que la respuesta contenga User', function () { \r",
+									"    pm.expect(pm.response.text()).to.include(\"user\");\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 10: Valida que respuesta contenga results', function () {\r",
+									"    pm.expect(pm.response.text()).to.include('results');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "952d0354-5ef5-4abc-b897-3d7aa63a5dbc",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/api/search/categories/videojuegos"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener categorias paginado",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "4f7f73db-e605-41bb-8df1-134eefeb4b2d",
+								"exec": [
+									"pm.test('Prueba 1: Validad que la respuesta es exitosa(200)', function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 2: Valida que el Header contenga Date', function () {\r",
+									"    pm.expect(pm.response.headers.has('Date')).to.be.true;\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 3: Valida que el tiempo de respuesta sea menor a 1300', function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1300);\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 4: Valida que el nombre del status sea ok', function () {\r",
+									"    pm.response.to.have.status('OK');\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 5: Valida que respuesta contenga categories', function () {\r",
+									"    pm.expect(pm.response.text()).to.include('categories');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 8: Validar que la respuesta contenga NAME\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 9: Validar que la respuesta contenga _id', function () { \r",
+									"    pm.expect(pm.response.text()).to.include(\"_id\");\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 10: Valida que respuesta contenga total', function () {\r",
+									"    pm.expect(pm.response.text()).to.include('total');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 11:La respuesta no debería contener errores y debe ser un JSON válido\", function () {\r",
+									"    pm.response.to.not.be.error;\r",
+									"    pm.response.to.have.jsonBody();\r",
+									"});\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "964b383b-9a76-42cf-8a7d-4f2748a2ee1d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/categories",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"categories"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": "18",
+									"disabled": true
+								},
+								{
+									"key": "from",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener categoria ID",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "5fe20969-3bf0-4b37-b8d5-b867c48d4339",
+								"exec": [
+									"pm.test('Prueba 1: Validad que la respuesta es exitosa(200)', function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 2: Valida que el Header contenga Date', function () {\r",
+									"    pm.expect(pm.response.headers.has('Date')).to.be.true;\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 3: Valida que el tiempo de respuesta sea menor a 800', function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(800);\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 4: Valida que el nombre del status sea ok', function () {\r",
+									"    pm.response.to.have.status('OK');\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 5: Valida que respuesta contenga ID', function () {\r",
+									"    pm.expect(pm.response.text()).to.include('_id');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 8: Validar que la respuesta contenga NAME\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 9: Validar que la respuesta contenga User', function () { \r",
+									"    pm.expect(pm.response.text()).to.include(\"user\");\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 10: Valida que respuesta contenga category', function () {\r",
+									"    pm.expect(pm.response.text()).to.include('category');\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "0056b657-6d4e-4ec5-934e-aeeee4dd4152",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/api/categories/6327a78d198186cd61decdc8"
+					},
+					"response": []
+				}
+			],
+			"id": "85c81e5c-b472-4aea-8421-0a174bfe994e"
+		},
+		{
+			"name": "Productos",
+			"item": [
+				{
+					"name": "Crear producto",
+					"id": "4b7144c2-3aa6-438f-9295-05c89b00dae0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Vestido Verano\",\r\n    \"category\": \"65789b99ff050eff6a4bbe17\",\r\n    \"description\": \"Vestido de lana corto perfecto para Verano\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/api/products/"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener productos",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"id": "ef0e0672-8fda-43a4-aeb4-178fdf1b87a1",
+								"exec": [
+									"pm.test('Prueba 1: Validad que la respuesta es exitosa(200)', function () {\r",
+									"    pm.response.to.have.status(200);\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 2: Valida que el Header contenga Date', function () {\r",
+									"    pm.expect(pm.response.headers.has('Date')).to.be.true;\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 3: Valida que el tiempo de respuesta sea menor a 1000', function () {\r",
+									"    pm.expect(pm.response.responseTime).to.be.below(1000);\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 4: Valida que el nombre del status sea ok', function () {\r",
+									"    pm.response.to.have.status('OK');\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 5: Valida que respuesta contenga ID', function () {\r",
+									"    pm.expect(pm.response.text()).to.include('_id');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 8: Validar que la respuesta contenga NAME\", function () {\r",
+									"    pm.expect(pm.response.text()).to.include(\"name\");\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 9: Validar que la respuesta contenga User', function () { \r",
+									"    pm.expect(pm.response.text()).to.include(\"user\");\r",
+									"});\r",
+									"\r",
+									"pm.test('Prueba 10: Valida que respuesta contenga products', function () {\r",
+									"    pm.expect(pm.response.text()).to.include('products');\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Prueba 11:La respuesta no debería contener errores y debe ser un JSON válido\", function () {\r",
+									"    pm.response.to.not.be.error;\r",
+									"    pm.response.to.have.jsonBody();\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"id": "af9096c8-1bc5-446c-8deb-bf9dd7f4c076",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/api/products/"
+					},
+					"response": []
+				},
+				{
+					"name": "Obtener producto x ID",
+					"id": "b42a107c-1ce3-47e7-8a0b-d2c10d6f7f54",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/api/products/63587c00af34b31235656563"
+					},
+					"response": []
+				},
+				{
+					"name": "Eliminar producto x ID",
+					"id": "670669ae-f51c-449b-a3de-b55e31ff650f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{host}}/api/products/63587c00af34b31235656563"
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar productos x ID",
+					"id": "f302a07b-7742-44c7-bf8d-941564633977",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Pala de Jardin small\",\r\n    \"category\": \"6327a78d198186cd61decdc8\",\r\n    \"description\": \"Pala de plastico\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{host}}/api/products/63593b14c79d74c80d562903"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Productos x Categoria",
+					"id": "325267b2-efeb-4cff-9674-83c53ce35d11",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/api/search/productsByCategory/VIDEOJUEGOS"
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar productos por nombre o ID",
+					"id": "ebe5250a-0033-40f8-a002-abeccfa5348d",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{host}}/api/search/products/MEDIUM"
+					},
+					"response": []
+				}
+			],
+			"id": "a9db475c-cdfc-490d-9d16-bcc450006d55"
+		},
+		{
+			"name": "Carga de archivos",
+			"item": [
+				{
+					"name": "Cargar archivos",
+					"id": "f3de4d84-cdf1-4374-8f0b-b002399ca9c9",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": "bayonetta-3-1-y-2-1080x609.jpg.webp",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{host}}/api/uploads/"
+					},
+					"response": []
+				},
+				{
+					"name": "Cargar archivos x nombre de coleccion e ID del registro",
+					"id": "0ebd30d4-41f8-4908-a8ce-87113a89b588",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": "Ae39fe8a1763b4e428e478ad6a3f3d0d2R.webp\n",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{host}}/api/uploads/users/62fab8ee06d55ee88cd06d49"
+					},
+					"response": []
+				},
+				{
+					"name": "Mostrar imagenes por coleccion usando ID de registro",
+					"id": "b1e75458-3e95-4658-ae1b-8dedc89c2549",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"value": "bayo_design.jpeg",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{host}}/api/uploads/products/63587c2505bad091ce63229f"
+					},
+					"response": []
+				}
+			],
+			"id": "f48befa7-8eda-4b09-9e22-2bf2f4e8caa0"
+		}
+	]
+}
